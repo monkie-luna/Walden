@@ -17,18 +17,6 @@
 > **Prompt:**
 > `cinematic shot of a cozy wooden cabin in a deep forest by a lake, night time, bioluminescent digital plants, subtle holographic data stream floating in the air, hyper realistic, 8k, tyndall effect, moody lighting, national geographic style mixed with cyberpunk aesthetic --ar 16:9 --style raw`
 
-#### 方案 B：孤独电影感 (王家卫/索菲亚·科波拉风格)
-> **Prompt:**
-> `cinematic film still, a lonely figure sitting by a lake, back view, surrounded by huge server racks covered in moss, nature reclaiming technology, melancholic atmosphere, soft grain, color graded like a movie, muted tones, isolation --ar 16:9 --style raw`
-
-#### 方案 C：虚幻引擎 3D 渲染 (干净、极简、高科技)
-> **Prompt:**
-> `isometric 3d render of a digital cabin floating on a mirror lake, minimalist design, glass and wood, glowing blue lines, soft fog, unreal engine 5 render, octane render, clean composition, dreamlike --ar 16:9`
-
-#### 方案 D：新海诚/吉卜力 (高饱和动画风)
-> **Prompt:**
-> `anime style, lush green forest, a boy coding on a holographic screen under a tree, beautiful clouds, sparkling water, vibrant colors, Makoto Shinkai style, Studio Ghibli, emotional, healing --ar 16:9 --niji 6`
-
 ### 2. 固定画风 (Locking the Style via `--sref`)
 当你生成了一张**完美**的图片（假设它是图 1）：
 1.  右键点击该图 -> **Copy Link** (复制图片链接)。
@@ -100,3 +88,41 @@
 ### 3. 人群与生活 (Urban Life) - 赛博公民
 > **Prompt:**
 > `cinematic shot of diverse people walking in a high-tech cyberpunk street, wearing futuristic fashion and cybernetic implants, surrounded by holographic interfaces and drone delivery bots, busy night market, neon lights, detailed crowd, 8k --no rain, umbrellas --ar 16:9`
+
+### 4. 载具与机械 (Vehicles & Mechs) - 移动堡垒
+**未来汽车设计稿 (Vehicle Design Blueprints - Multiple Angles):**
+> **Prompt (通用公式):**
+> `vehicle design sheet of a futuristic cyberpunk [VEHICLE_TYPE], studio lighting, multiple angles including front view, side view, back view, and isometric view, sharp angular design, [COLOR] body with neon accents, technical annotations, blueprint style, high resolution, 8k --no rain --ar 16:9`
+
+**1. 赛博越野车 (Cyber Off-road SUV):**
+> **Prompt:**
+> `vehicle design sheet of a futuristic cyberpunk off-road SUV, heavy duty tires, reinforced chassis, roof rack with sensor array, studio lighting, multiple angles: front, side, rear, isometric, tactical camouflage finish, neon accents, technical blueprint style, 8k --no rain --ar 16:9`
+
+**2. 极速跑车 (Hyper Sportscar):**
+> **Prompt:**
+> `vehicle design sheet of a futuristic cyberpunk hypercar, extremely low profile, aerodynamic body, scissor doors, glowing engine bay,  studio lighting, multiple angles: front, side, rear, top down, vibrant dual-tone finish, neon strips, industrial design concept, 8k --no rain --ar 16:9`
+
+**3. 豪华轿车 (Luxury Sedan):**
+> **Prompt:**
+> `vehicle design sheet of a futuristic cyberpunk luxury sedan, long wheelbase, suicide doors, smooth curves mixed with sharp edges, studio lighting, multiple angles: front, side, rear, 3/4 view, premium metallic finish, elegant light lines, automotive design sketch, 8k --no rain --ar 16:9`
+
+**4. 城市公交 (Future Bus):**
+> **Prompt:**
+> `vehicle design sheet of a futuristic cyberpunk city bus, articulated body, large glass canopy, autonomous sensor pods, studio lighting, multiple angles: front, side, rear, interior layout, modern city transit color scheme, public transit design concept, 8k --no rain --ar 16:9`
+
+**巨型机甲 (Mecha):**
+> **Prompt:**
+> `low angle shot of a massive industrial mech robot standing in a maintenance bay, heavy metal texture, hydraulic pipes, warning lights, sparks flying from welding repairs, tiny human engineers for scale, industrial sci-fi atmosphere, 8k --ar 16:9`
+
+### 5. 室内空间 (Interiors) - 科技与生活的结合
+**高科技公寓 (Cyber Apartment):**
+> **Prompt:**
+> `interior shot of a futuristic apartment, floor-to-ceiling windows overlooking the neon city skyline at night, minimalist furniture with glowing edges, holographic computer terminal, messy cables, cozy but high-tech, ambient lighting, 8k --ar 16:9`
+
+**黑客工作室 (Hacker Workspace):**
+> **Prompt:**
+> `cluttered workbench in a dimly lit room, multiple monitors displaying code and schematics, disassembled robot parts, soldering iron, empty energy drink cans, cool blue monitor glow illuminating the room, cyberpunk hideout vibe, detailed textures, 8k --ar 16:9`
+
+**飞船驾驶舱 (Spaceship Cockpit):**
+> **Prompt:**
+> `pov shot from inside a spaceship cockpit, complex dashboard with hundreds of buttons and holographic displays, view of a nebula or planet through the windshield, worn leather seat, realistic sci-fi controls, star wars aesthetic mixed with cyberpunk, 8k --ar 16:9`
