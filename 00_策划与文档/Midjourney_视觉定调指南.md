@@ -9,19 +9,16 @@
 根据我们最新确定的“守夜人”人设（冰冷代码 vs 温暖自然），我们不再使用普通的风景照，而是要追求一种**“高智感”的冲突美学**。
 
 **推荐方向：** 8K 电影级写实自然 + 微妙的数字干扰 (Glitch) / 悬浮 UI。
-
-### 1. 测试画风 (Style Test)
-请复制以下 4 条 Prompt 到 Midjourney (Discord) 中运行，选出最让你心动的一张图：
-
-#### 方案 A：极致写实 + 赛博点缀 (推荐，最符合“守夜人”设定)
-> **Prompt:**
-> `cinematic shot of a cozy wooden cabin in a deep forest by a lake, night time, bioluminescent digital plants, subtle holographic data stream floating in the air, hyper realistic, 8k, tyndall effect, moody lighting, national geographic style mixed with cyberpunk aesthetic --ar 16:9 --style raw`
+> **Prompt:** 
+2249237444
+> `--sref 2249237444 --ar 16:9 --style raw`
 
 ### 2. 固定画风 (Locking the Style via `--sref`)
 当你生成了一张**完美**的图片（假设它是图 1）：
 1.  右键点击该图 -> **Copy Link** (复制图片链接)。
 2.  在接下来的所有 Prompt 后面加上：`--sref <图片链接> --sw 100`。
-    *   *注：`--sref` (Style Reference) 会让 MJ 强行模仿这张图的色调、光影和笔触。*
+    *   *注：`--sref` (Style Reference) 是“风格参考”，让 MJ 模仿参考图的色调、光影和质感。*
+    *   *注：`--sw` (Style Weight) 是“风格权重”，范围 0-1000（默认 100）。**为了保持视频画风高度统一，建议尝试设置 `--sw 500` 或更高。***
 
 ---
 
@@ -72,6 +69,21 @@
 
 **操作：** 直接在 Prompt 后加 `--sref 185987625` 试试效果。
 
+### 2. 白天转黑夜 (Day to Night Conversion)
+**方法 A：图片权重法 (快速，但可能有细微结构变化)**
+> **Prompt:**
+> `[原图链接] same city scene at night, pitch black sky, no sun, no daylight, cyberpunk neon lighting, glowing signs, artificial street lights, cinematic night atmosphere, midnight, dark shadows, sharp focus --no clouds, fog, mist, smoke, haze, sun, daylight, blue sky --iw 1 --ar 16:9`
+*   **注意**：如果你发现天空还是亮，请将 `--iw` 降低到 **0.5**。`--iw 2` 会锁死原图的白天光照。
+
+**方法 B：局部重绘法 (Vary Region) - 推荐，结构 100% 不变**
+如果方法 A 依然改了结构，请用此终极大法：
+1.  在 MJ 中发送并放大 (Upscale) 你的白天原图。
+2.  点击 **`Vary (Region)`** 按钮。
+3.  **框选区域**：用套索工具选中**天空**、**地面**、**窗户**等需要变暗或发光的地方。（**保留建筑主体轮廓不选**）。
+4.  **修改 Prompt**：在弹出框里输入 `night time, cyberpunk neon lighting, dark sky, glowing windows`。
+5.  点击箭头提交。
+*   *原理：未被框选的区域会像素级保留，只有框选区域会被重绘为夜景。*
+
 ---
 
 ## 场景扩展库：未来城市 (Future City Expansion)
@@ -79,15 +91,15 @@
 
 ### 1. 城市全景 (Cityscape) - 霓虹丛林
 > **Prompt:**
-> `wide cinematic shot of a massive futuristic cyberpunk city, towering skyscrapers piercing the clouds, dense holographic advertisements and neon lights in blue and pink, flying cars traffic, dry surfaces, high-tech infrastructure, hyper realistic, 8k, blade runner aesthetic, cinematic lighting, intricate details, sharp focus, octane render, unreal engine 5, masterpiece, high fidelity, global illumination --no rain, water --ar 16:9 --stylize 250`
+> `wide cinematic shot of a massive futuristic cyberpunk city, towering skyscrapers piercing the clouds, dense holographic advertisements and neon lights in blue and pink, flying cars traffic, dry surfaces, high-tech infrastructure, purely mechanical and architectural, hyper realistic, 8k, blade runner aesthetic, cinematic lighting, intricate details, sharp focus, octane render, unreal engine 5, masterpiece, high fidelity, global illumination --no rain, water, trees, plants, nature --ar 16:9 --stylize 250`
 
 ### 2. 街道特写 (Street View) - 钢铁与光影
 > **Prompt:**
-> `street level view of a busy cyberpunk city, narrow alleyway filled with complex pipes and cables, glowing neon signs, steam rising from vents, futuristic shops and food stalls, dark and moody atmosphere with vibrant light accents, photorealistic, 8k --no rain, puddles --ar 16:9`
+> `street level view of a busy cyberpunk city, narrow alleyway filled with complex pipes and cables, glowing neon signs, steam rising from vents, futuristic shops and food stalls, dark and moody atmosphere with vibrant light accents, industrial textures, photorealistic, 8k --no rain, puddles, trees, plants --ar 16:9`
 
 ### 3. 人群与生活 (Urban Life) - 赛博公民
 > **Prompt:**
-> `cinematic shot of diverse people walking in a high-tech cyberpunk street, wearing futuristic fashion and cybernetic implants, surrounded by holographic interfaces and drone delivery bots, busy night market, neon lights, detailed crowd, 8k --no rain, umbrellas --ar 16:9`
+> `cinematic shot of diverse people walking in a high-tech cyberpunk street, wearing futuristic fashion and cybernetic implants, surrounded by holographic interfaces and drone delivery bots, busy night market, neon lights, detailed crowd, 8k --no rain, umbrellas, trees, plants --ar 16:9`
 
 ### 4. 载具与机械 (Vehicles & Mechs) - 移动堡垒
 **未来汽车设计稿 (Vehicle Design Blueprints - Multiple Angles):**
@@ -126,3 +138,15 @@
 **飞船驾驶舱 (Spaceship Cockpit):**
 > **Prompt:**
 > `pov shot from inside a spaceship cockpit, complex dashboard with hundreds of buttons and holographic displays, view of a nebula or planet through the windshield, worn leather seat, realistic sci-fi controls, star wars aesthetic mixed with cyberpunk, 8k --ar 16:9`
+
+### 6. 特别篇：治愈系游戏视角 (Special: Cozy Game Style - POV & TPS)
+**风格定位：** 第一人称/第三人称游戏视角 (POV/TPS) + 治愈系 (Healing) + 半写实动画风 (Semi-realistic Anime)。
+**适用场景：** 模拟“瓦尔登”系统内部的虚拟体验。
+
+**1. 漫步自然 (Nature Walk) - 第三人称 (TPS):**
+> **Prompt:**
+> `third person perspective gameplay screenshot, a character walking through a lush green meadow with wildflowers, back view, sunny day, blue sky with fluffy clouds, wind blowing through grass, semi-realistic animated style, Studio Ghibli meets Unreal Engine 5, soft dreamlike lighting, peaceful atmosphere, high fidelity, 8k --ar 16:9`
+
+**2. 窗边独处 (Cozy Indoor):**
+> **Prompt:**
+> `first person perspective (POV) shot, sitting by a large window holding a steaming cup of coffee, looking out at a peaceful landscape, warm sunlight streaming in, dust motes dancing in the light, cozy wooden interior, semi-realistic anime style, Makoto Shinkai vibes, highly detailed textures, soothing atmosphere, 8k --ar 16:9`
